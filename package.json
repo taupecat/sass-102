@@ -1,21 +1,21 @@
 {
-  "name": "reveal.js",
-  "version": "2.6.2",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
+  "name": "sass-102",
+  "version": "1.0.0",
+  "description": "Slides for Sassy DC Meetup",
+  "homepage": "http://taupecat.github.io/sass-102",
+  "subdomain": "sass-102",
   "scripts": {
     "test": "grunt test",
     "start": ""
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "Tracy Rotton",
+    "email": "tracy@taupecat.com",
+    "web": "http://taupecat.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/taupecat/sass-102.git"
   },
   "engines": {
     "node": "~0.8.0"
@@ -40,7 +40,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/hakimel/reveal.js/blob/master/LICENSE"
+      "url": "http://opensource.org/licenses/MIT"
     }
   ]
 }
