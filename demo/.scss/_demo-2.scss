@@ -1,0 +1,38 @@
+body.demo-2 {
+    background-color: #682674;
+
+    .wrapper {
+        margin: 0 auto;
+        max-width: 1024px;
+    }
+
+    .main,
+    .sidebar {
+        padding: 0.5em 0;
+    }
+
+    .main {
+        background-color: #FFEECE;
+    }
+
+    .sidebar {
+        background-color: #C6D4F5;
+    }
+
+    // @media only all and (min-width: 700px) {
+
+        .main,
+        .sidebar {
+            float: left;
+        }
+
+        .main {
+            margin-right: 1.953125%; /* 20px / 1024px */
+            width: 61.71875%; /* 632px / 1024px */
+        }
+
+        .sidebar {
+            width: 36.328125%; /* 372px / 1024px */
+        }
+    // }
+}

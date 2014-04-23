@@ -49,8 +49,9 @@
 
 				<section>
 					<h2>Who Am I?</h2>
-					<h3>Tracy Rotton <a href="http://twitter.com/taupecat">@taupecat</a></h3>
+					<h3>Tracy Rotton</h3>
 					<ul>
+						<li><a href="http://twitter.com/taupecat">@taupecat</a></li>
 						<li>Lead Web Developer for <a href="http://rp3agency.com">RP3 Agency</a></li>
 						<li>20 years front end web development experience</li>
 						<li><a href="http://wordpress.org/">WordPress</a> core contributor</li>
@@ -66,6 +67,17 @@
 						<li>Nesting (Don't Abuse!)</li>
 						<li>@extend</li>
 						<li>Mixins</li>
+						<li>Media Query Bubbling</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h2>Sass 102</h2>
+
+					<ul>
+						<li>Data Types</li>
+						<li>Control Structures</li>
 					</ul>
 				</section>
 
@@ -81,9 +93,9 @@
 				</section>
 
 				<section>
-					<h2>CSS Has (Very Few) of These…</h2>
+					<h2>CSS Has (Very Few) of These...</h2>
 					<p class="fragment">
-						…which makes it <strong>not</strong> a programming language.  Programming languages require logic, which CSS lacks except for a very few exceptions.
+						…which makes it <strong>not</strong> a programming language.  Programming languages require logic, which CSS lacks, with few exceptions.
 					</p>
 
 					<aside class="notes">
@@ -94,43 +106,24 @@
 				<section>
 					<h2>Basic Sass Data Types</h2>
 					<ul>
-						<li class="fragment"><strong>Numbers:</strong>
-							<ul>
-								<li>3.14159</li>
-								<li>42</li>
-								<li>10px</li>
-							</ul>
+						<li class="fragment">
+							<strong>Numbers:</strong><br>
+							3.14159, 42, 10px
 						</li>
-						<li class="fragment"><strong>Strings:</strong>
-							<ul>
-								<li>foo</li>
-								<li>"bar"</li>
-							</ul>
+						<li class="fragment">
+							<strong>Strings:</strong><br>
+							foo, "bar"
 						</li>
-						<li class="fragment"><strong>Colors:</strong>
-							<ul>
-								<li>#f0f</li>
-								<li>rgba(255, 0, 255)</li>
-								<li>hsla(300, 100%, 50%, 1)</li>
-							</ul>
+						<li class="fragment">
+							<strong>Colors:</strong><br>
+							#f0f, rgb(255, 0, 255), hsla(300, 100%, 50%, 1)
 						</li>
 					</ul>
+
+					<br><br>
+
+					<p class="fragment">Like any data type, these can be acted on.</p>
 				</section>
-
-				<section>
-					<p>Like any data type, these can be acted on:</p>
-
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-body {
-	background-color: rgb(255, 0, 0) + #00F
-}
-
-body {
-	background-color: magenta;
-}
-					</code></pre>
-				</section>
-
 
 				<section>
 					<h2>More Data Types</h2>
@@ -143,10 +136,8 @@ body {
 				<section>
 					<h2>But Wait, There's More!</h2>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li>Lists (a.k.a. arrays)</li>
+						<li>Maps (a.k.a. hashes)</li>
 					</ul>
 				</section>
 
