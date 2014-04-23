@@ -1,0 +1,102 @@
+## List
+
+$header-aux:	facebook, twitter, linkedin, pinterest, search;
+
+@each $menu-item in $header-aux {
+	&.#{$menu-item} a {
+		@extend %genericon-#{$menu-item};
+	}
+}
+
+.site-header .menu-open.use-genericons:before {
+  content: '\f419';
+}
+
+.header-aux li.search a:before, .header-aux .search-toggle:before, .search-form button[type="submit"]:before {
+  content: '\f400';
+}
+
+.header-aux li.facebook a:before {
+  content: '\f204';
+}
+
+.header-aux li.twitter a:before {
+  content: '\f202';
+}
+
+.header-aux li.linkedin a:before {
+  content: '\f207';
+}
+
+.header-aux li.search a:before, .header-aux .search-toggle:before, .search-form button[type="submit"]:before {
+  content: '\f400';
+}
+
+.search-form .close:before {
+  content: '\f405';
+}
+
+.header-aux li.pinterest a:before {
+  content: '\f209';
+}
+
+## Maps
+
+// To which end should the photos of people be anchored?
+$people: (
+	bjohnson: center,
+	lansbury: center,
+	kroberts: left,
+	jhannigan: left,
+	oquinones: left,
+	tbacon: right,
+	wqueener: left,
+	nparo: right,
+	trotton: left,
+	shasten: left,
+	equinn: right,
+	aantosh: right
+);
+
+@each $person, $anchor in $people {
+	&.#{$person} {
+		background-position: $anchor top;
+	}
+}
+
+.people article.bjohnson {
+  background-position: center top;
+}
+.people article.lansbury {
+  background-position: center top;
+}
+.people article.kroberts {
+  background-position: left top;
+}
+.people article.jhannigan {
+  background-position: left top;
+}
+.people article.oquinones {
+  background-position: left top;
+}
+.people article.tbacon {
+  background-position: right top;
+}
+.people article.wqueener {
+  background-position: left top;
+}
+.people article.nparo {
+  background-position: right top;
+}
+.people article.trotton {
+  background-position: left top;
+}
+.people article.shasten {
+  background-position: left top;
+}
+.people article.equinn {
+  background-position: right top;
+}
+.people article.aantosh {
+  background-position: right top;
+}
