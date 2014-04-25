@@ -15,10 +15,19 @@ gulp.task('clean', function() {
 gulp.task('styles', function() {
   return gulp.src('scss/**/*.scss')
     .pipe(sass({ style: 'expanded' }))
+	.on('error', gutil.log)
     .pipe(gulp.dest('css'))
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
 gulp.task('default', ['clean'], function() {
     gulp.start('styles');
+});
+
+/**
+ * Watch task
+ */
+gulp.task( 'watch', function() {
+	gulp.start( 'default' );
+	gulp.watch( 'scss/**/*.scss', ['styles'] );
 });
