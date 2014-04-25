@@ -1,0 +1,57 @@
+/**
+ * Adding and subtracting colors
+ */
+$demo1-color1:			#999 !default;
+$demo1-color2:			$demo1-color1 !default;
+$demo1-color3:			$demo1-color1 !default;
+
+// $demo1-color1:		#F00;
+// $demo1-color2:		rgb(0, 0, 255);
+// $demo1-color3:		$demo1-color1 + $demo1-color2;
+
+// $demo1-color1:		BurlyWood;
+// $demo1-color2:		hsl(120deg, 76%, 55%);
+// $demo1-color3:		$demo1-color1 + $demo1-color2;
+
+// $demo1-color1:		#6b747c;
+// $demo1-color2:		#00bbe3;
+// $demo1-color3:		$demo1-color1 - $demo1-color2;
+
+/**
+ * Demo time!
+ */
+
+%demo1-box {
+	border: 2px solid mix(#000, #999, 50%);
+	float: left;
+	height: 200px;
+	margin: 0 1em;
+	width: 200px;
+}
+
+.demo1-color1 {
+	@extend %demo1-box;
+	background-color: $demo1-color1;
+}
+
+.demo1-color2 {
+	@extend %demo1-box;
+	background-color: $demo1-color2;
+}
+
+.demo1-color3 {
+	@extend %demo1-box;
+	background-color: $demo1-color3;
+}
+
+/**
+ * Ancillary stuff
+ */
+
+@import "sass102";
+
+.operator {
+	display: block;
+	float: left;
+	margin-top: 90px;
+}
