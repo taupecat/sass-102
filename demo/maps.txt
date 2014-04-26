@@ -1,6 +1,6 @@
 ## List
 
-$header-aux:	facebook, twitter, linkedin, pinterest, search;
+$social:	( facebook, twitter, linkedin, pinterest );
 
 @each $menu-item in $header-aux {
 	&.#{$menu-item} a {

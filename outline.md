@@ -25,3 +25,14 @@
 
 ## Color calculation example
 
+## Lists
+
+## Gotchas
+
+* Index starts at 1
+* Lists can be space or comma separated
+
+## Maps
+
+(not to be confused with source maps)
+

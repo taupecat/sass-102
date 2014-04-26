@@ -1,0 +1,19 @@
+/**
+ * Using Lists
+ */
+
+$states: (
+	"AL", "DC", "DE", "FL", "GA", "IA", "IL",
+	"IN", "KY", "LA", "MD", "MI", "MO", "MS",
+	"NC", "NJ", "NY", "OH", "PA", "SC", "TN",
+	"VA", "WV"
+);
+
+.infographic {
+ 
+    @each $state in $states {
+        &.#{$state} {
+            background-image: url("../images/state_infographics/#{$state}.png");
+        }
+    }
+}
