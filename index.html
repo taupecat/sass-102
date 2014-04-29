@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 	<head>
@@ -118,7 +118,7 @@
 						</li>
 						<li class="fragment">
 							<strong>Colors:</strong><br>
-							#f0f, rgb(255, 0, 255), hsla(300, 100%, 50%, 1)
+							#f0f, rgb(255, 0, 255), hsla(300, 100%, 50%, 1), BurlyWood
 						</li>
 					</ul>
 
@@ -132,6 +132,10 @@
 
 					<p>Let's calculate some colors</p>
 
+					<aside class="notes">
+						This is what makes Sass color functions like mix() and adjust-hue() possible
+					</aside>
+
 				</section>
 
 				<section>
@@ -139,14 +143,8 @@
 					<ul>
 						<li class="fragment"><strong>Booleans:</strong> true & false</li>
 						<li class="fragment"><strong>Null:</strong> null
-					</ul>
-				</section>
-
-				<section>
-					<h2>But Wait, There's More!</h2>
-					<ul>
-						<li class="fragment">Lists (a.k.a. arrays)</li>
-						<li class="fragment">Maps (a.k.a. hashes), <strong>new in 3.3</strong></li>
+						<li class="fragment"><strong>Lists</strong> (a.k.a. arrays)</li>
+						<li class="fragment"><strong>Maps</strong> (a.k.a. hashes), new in 3.3</li>
 					</ul>
 				</section>
 
@@ -437,7 +435,7 @@ function linkify( selector ) {
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
