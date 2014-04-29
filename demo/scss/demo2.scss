@@ -10,10 +10,24 @@ $states: (
 );
 
 .infographic {
- 
-    @each $state in $states {
+     @each $state in $states {
         &.#{$state} {
             background-image: url("../images/state_infographics/#{$state}.png");
         }
     }
+}
+
+$social: (
+	"facebook":       '\f204',
+	"twitter":        '\f202',
+	"linkedin":       '\f207',
+	"pinterest":      '\f209',
+	"github":         '\f200',
+	"dribbble":       '\f201',
+	"instagram":      '\f215',
+	"email":          '\f410'
+);
+
+li.facebook:before {
+	content: map-get( $social, "facebook" );
 }
