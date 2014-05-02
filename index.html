@@ -46,7 +46,8 @@
 					<h1>Sass 102</h1>
 					<h3>Data Types & Control Structures</h3>
 
-					<p>Follow along at <a href="http://taupecat.github.io/sass-102">http://taupecat.github.io/sass-102</a></p>
+					<p>Follow along at<br>
+					 <a href="http://taupecat.github.io/sass-102">http://taupecat.github.io/sass-102</a></p>
 				</section>
 
 				<section>
@@ -55,7 +56,6 @@
 					<ul>
 						<li><a href="http://twitter.com/taupecat">@taupecat</a></li>
 						<li>Lead Web Developer for <a href="http://rp3agency.com">RP3 Agency</a></li>
-						<li>20 years front end web development experience</li>
 						<li><a href="http://wordpress.org/">WordPress</a> core contributor</li>
 						<li><a href="http://sass-lang.com">Sass</a> fan</li>
 					</ul>
@@ -161,6 +161,18 @@ $states: (
 				</section>
 
 				<section>
+					<h3>Some List Functions</h3>
+
+					<ul>
+						<li>length( $list )</li>
+						<li>nth( $list, $n )</li>
+						<li>join( $list1, $list2 [, $separator] )</li>
+						<li>append( $list, $val [, $separator] )</li>
+						<li>index( $list, $value )</li>
+					</ul>
+				</section>
+
+				<section>
 					<h3>Maps</h3>
 					<pre><code data-trim contenteditable>
 $social: (
@@ -177,6 +189,7 @@ $social: (
 				</section>
 
 				<section>
+<section>
 					<h3>Map Functions</h3>
 
 <h4>SCSS:</h4>
@@ -184,12 +197,28 @@ $social: (
 					<pre><code data-trim>li.facebook:before {
 	content: map-get($social, "facebook");
 }</code></pre>
+</section>
 
+<section>
+					<h3>Map Functions</h3>
 <h4>CSS:</h4>
 
 					<pre><code data-trim>li.facebook:before {
 	content: '\f204';
 }</code></pre>
+</section>
+				</section>
+
+				<section>
+					<h3>Some More Map Functions</h3>
+
+					<ul>
+						<li>map-merge( $map1, $map2 )</li>
+						<li>map-remove( $map, $key )</li>
+						<li>map-keys( $map )</li>
+						<li>map-values( $map )</li>
+						<li>map-has-key( $map, $key )</li>
+					</ul>
 				</section>
 
 				<section>
@@ -203,10 +232,14 @@ $social: (
 					</ul>
 				</section>
 
-				<section>
-					<h2>@if / @else if / @else</h2>
 
-<!-- <blockquote class="twitter-tweet" lang="en"><p>Alright CSS experts... A way to say &quot;apply these styles at breakpoint x if an element doesn&#39;t have a class, otherwise at breakpoint y.&quot;</p>&mdash; Josh in Sioux Falls (@joshbroton) <a href="https://twitter.com/joshbroton/statuses/451897740126334977">April 4, 2014</a></blockquote> -->
+
+
+<section>
+
+	<section>
+
+		<h3>@if / @else if / @else</h3>
 
 <pre><code data-trim>@mixin breakpoint($breakpoint) {
   @if $breakpoint == medium {
@@ -220,12 +253,13 @@ $social: (
   }
 }</code></pre>
 
-				</section>
+	</section>
 
-				<section>
-					<h2>@if / @else if / @else</h2>
+	<section>
 
-<h4>SCSS:</h4>
+		<h3>@if / @else if / @else</h3>
+
+		<h4>SCSS:</h4>
 
 <pre><code data-trim>p {
   background-color: rgba(255, 0, 255, 0.2);
@@ -235,7 +269,13 @@ $social: (
   }
 }</code></pre>
 
-<h4>CSS:</h4>
+	</section>
+
+	<section>
+
+		<h3>@if / @else if / @else</h3>
+
+		<h4>CSS:</h4>
 
 <pre><code data-trim>p {
   background-color: rgba(255, 0, 255, 0.2);
@@ -248,17 +288,63 @@ $social: (
 }
 </code></pre>
 
+	</section>
+
+</section>
+
+				<section>
+
+					<section>
+						<h3>@for</h3>
+
+<pre><code data-trim>@mixin griddr($cols) {
+  // do a math here
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    @include griddr($i);
+  }
+}</code></pre>
+
+					</section>
+
+					<section>
+						<h3>@for</h3>
+
+<h4>SCSS</h4>
+
+<pre><code data-trim>@for $i from 1 through 9 {
+  .space-#{$i} {
+    background-image: url("../images/space/space-#{$i}.jpg");
+  }
+}</code></pre>
+</section>
+
+<section>
+						<h3>@for</h3>
+<h4>CSS</h4>
+
+<pre><code data-trim>.space-1 {
+  background-image: url("../images/space/space-1.jpg");
+}
+.space-2 {
+  background-image: url("../images/space/space-2.jpg");
+}
+.space-3 {
+  background-image: url("../images/space/space-3.jpg");
+}
+
+etc.</code></pre>
+
+					</section>
+
+
 				</section>
 
 				<section>
-					<h2>@for</h2>
-
-<pre><code data-trim></code></pre>
-
-				</section>
-
-				<section>
-					<h2>@each</h2>
+<section>
+					<h3>@each in Lists</h3>
 
 <h4>SCSS:</h4>
 
@@ -267,7 +353,10 @@ $social: (
     background-image: url("../images/state_infographics/#{$state}.png");
   }
 }</code></pre>
+</section>
 
+<section>
+					<h3>@each in Lists</h3>
 <h4>CSS:</h4>
 
 <pre><code data-trim>.AL {
@@ -283,12 +372,12 @@ $social: (
 }
 
 ...</code></pre>
-
+</section>
 				</section>
 
 				<section>
-					<h2>@each</h2>
-
+<section>
+					<h3>@each in Maps</h3>
 <h4>SCSS:</h4>
 
 <pre><code data-trim>@each $network, $content in $social {
@@ -296,7 +385,10 @@ $social: (
     content: $content;
   }
 }</code></pre>
+</section>
 
+<section>
+					<h3>@each in Maps</h3>
 <h4>CSS:</h4>
 
 <pre><code data-trim>.facebook a:before {
@@ -312,14 +404,44 @@ $social: (
 }
 
 ...</code></pre>
-
+</section>
 				</section>
 
 				<section>
-					<h2>@while</h2>
 
-<pre><code data-trim></code></pre>
+					<section>
+					<h3>@while</h3>
+<h4>SCSS</h4>
 
+<pre><code data-trim>$types: 4
+$type-width: 20px
+
+@while $types > 0 {
+  .while-#{$types} {
+    width: $type-width + $types;
+  }
+  $types: $types - 1
+}</code></pre>
+</section>
+
+<section>
+	<h3>@while</h3>
+
+	<h4>CSS</h4>
+<pre><code data-trim>.while-4 {
+  width: 24px;
+}
+.while-3 {
+  width: 23px;
+}
+.while-2 {
+  width: 22px;
+}
+.while-1 {
+  width: 21px;
+}
+</code></pre>
+</section>
 				</section>
 
 				<section>
