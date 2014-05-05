@@ -14,16 +14,29 @@ $demo1-color3:			$demo1-color1 !default;
 // $demo1-color2:		olive;
 // $demo1-color3:		$demo1-color1 + $demo1-color2;
 
-// $demo1-color1:		#6b747c;
-// $demo1-color2:		#00bbe3;
-// $demo1-color3:		$demo1-color1 - $demo1-color2;
+$demo1-color1:		#6b747c;
+$demo1-color2:		#00bbe3;
+$demo1-color3:		$demo1-color1 - $demo1-color2;
 
 %demo1-box {
 	border: 2px solid mix(#000, #999, 50%);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	float: left;
 	height: 200px;
 	margin: 0 1em;
 	width: 200px;
+}
+
+body.demo-1 {
+	background-color: #060540;
+	color: #fff;
+}
+
+.wrapper {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 772px;
 }
 
 .demo1-color1 {
