@@ -31,18 +31,24 @@ $social: (
 
 
 
-$mega-social: (
-	"facebook":		( content: "\f204", coords: 0 0 ),
-	"twitter":		( content: "\f202", coords: 0 -64px ),
-	"linkedin":		( content: "\f207", coords: 0 -128px )
-);
 
-@each $key, $value in $mega-social {
-	.#{$key} a {
-		background-position: map-get( $value, coords );
 
-		&:before {
-			content: map-get( $value, content );
-		}
-	}
-}
+/**
+ * Multidimensional Sass maps FTW!
+ */
+
+// $mega-social: (
+// 	"facebook":		( content: "\f204", coords: 0 0 ),
+// 	"twitter":		( content: "\f202", coords: 0 -64px ),
+// 	"linkedin":		( content: "\f207", coords: 0 -128px )
+// );
+
+// @each $key, $value in $mega-social {
+// 	.sprite .#{$key} {
+// 		background-position: map-get( $value, coords );
+// 	}
+
+// 	.icon-font .#{$key}:before {
+// 		content: map-get( $value, content );
+// 	}
+// }
